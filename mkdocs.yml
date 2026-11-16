@@ -1,0 +1,53 @@
+site_name: Bata Maru ri · बातां मरु री
+site_description: Rajasthani folklore, local story summaries, and academic Rajasthani studies.
+
+theme:
+  name: material
+  language: en
+  palette:
+    # Light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep orange
+      accent: amber
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Noto Serif
+    code: JetBrains Mono
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+plugins:
+  - search
+  - blog:
+      blog_dir: .
+      post_date_format: medium
+      post_url_format: "{date}/{slug}"
+      archive_name: Archive
+      categories_name: Categories
+      post_excerpt: optional
+
+markdown_extensions:
+  - admonition
+  - footnotes
+  - attr_list
+  - toc:
+      permalink: true
+
+nav:
+  - Stories: index.md
+  - About: about.md
